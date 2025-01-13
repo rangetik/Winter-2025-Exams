@@ -4,17 +4,13 @@
 'use strict';
 
 const sum = (array) => {
-  const sumTotal = [0];
+  let sumTotal = 0;
   for (const element of array) {
-    const type = typeof element;
-    if (type === 'number') {
-      if (sumTotal.length > 0) {
-        const newSum = sumTotal[sumTotal.length - 1] + element;
-        sumTotal.push(newSum);
-      }
+    if (typeof element === 'number') {
+        sumTotal += element;
     }
   }
-  return sumTotal[sumTotal.length - 1];
+  return sumTotal;
 };
 
 module.exports = sum;
