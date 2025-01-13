@@ -3,7 +3,7 @@
 
 'use strict';
 
-const countTypes = function (array) {
+const countTypes = (array) => {
   const typeCounts = {
     number: 0,
     string: 0,
