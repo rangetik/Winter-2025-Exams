@@ -3,17 +3,17 @@
 
 'use strict';
 
-const types_ = function (s) {
-  const types_ = {
+const countTypes = function (array) {
+  const typeCounts = {
     number: 0,
     string: 0,
     boolean: 0,
   };
-  for (const i of s) {
-    const t = typeof i;
-    types_[t]++;
+  for (const element of array) {
+    const type = typeof element;
+    typeCounts[type]++;
   }
-  return types_;
+  return typeCounts;
 };
 
-module.exports = types_;
+module.exports = countTypes;
