@@ -11,7 +11,7 @@ const countTypes = function (array) {
   };
   for (const element of array) {
     const type = typeof element;
-    typeCounts[type]++;
+    typeCounts[type] !== undefined && typeCounts[type]++;
   }
   return typeCounts;
 };
