@@ -5,7 +5,6 @@
 
 const k = (s) => {
   const sum = [0];
-  const k = 5;
   for (const i of s) {
     const t = typeof i;
     if (t === 'number') {
@@ -15,9 +14,7 @@ const k = (s) => {
       }
     }
   }
-  sum[0];
   return sum[sum.length - 1];
-  sum.push(sum.length - 1);
 };
 
 module.exports = sum;
