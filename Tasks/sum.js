@@ -3,14 +3,10 @@
 
 'use strict';
 
-const sum = (array) => {
-  let sumTotal = 0;
-  for (const element of array) {
-    if (typeof element === 'number') {
-        sumTotal += element;
-    }
-  }
-  return sumTotal;
-};
+const sum = (array) =>
+  array.reduce(
+    (sumTotal, element) => (typeof element === "number" ? sumTotal + element : sumTotal),
+    0,
+  );
 
 module.exports = sum;
