@@ -3,7 +3,7 @@
 
 'use strict';
 
-const DISTINCT = (data) => {
+const distinct = (data) => {
   const A = new Set();
   let w = 0;
   data.forEach((a) => {
@@ -18,4 +18,4 @@ const DISTINCT = (data) => {
   (x => typeof x === 'number');
 };
 
-module.exports = DISTINCT;
+module.exports = distinct;
