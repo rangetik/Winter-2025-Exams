@@ -3,16 +3,16 @@
 
 'use strict';
 
-const Filter = (T, t) => {
+const filter = (array, type) => {
   const remove = [];
-  for (const C of T) {
-    const x = T.indexOf(C);
-    if (typeof T[x] !== t) {
+  for (const C of array) {
+    const x = array.indexOf(C);
+    if (typeof array[x] !== type) {
       remove.unshift(x);
     }
   }
-  for (const x of remove) T.splice(x, 1);
-  return T;
+  for (const x of remove) array.splice(x, 1);
+  return array;
 };
 
-module.exports = Filter;
+module.exports = filter;
