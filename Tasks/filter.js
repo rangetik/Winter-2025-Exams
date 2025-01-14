@@ -4,14 +4,14 @@
 'use strict';
 
 const filter = (array, type) => {
-  const remove = [];
-  for (const C of array) {
-    const x = array.indexOf(C);
-    if (typeof array[x] !== type) {
-      remove.unshift(x);
+  const removeArray = [];
+  for (const value of array) {
+    const index = array.indexOf(value);
+    if (typeof array[index] !== type) {
+      removeArray.unshift(index);
     }
   }
-  for (const x of remove) array.splice(x, 1);
+  for (const index of removeArray) array.splice(index, 1);
   return array;
 };
 
