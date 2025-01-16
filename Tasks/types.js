@@ -4,14 +4,11 @@
 'use strict';
 
 const countTypes = (array) => {
-  const typeCounts = {
-    number: 0,
-    string: 0,
-    boolean: 0,
-  };
+  const typeCounts = {};
   for (const element of array) {
     const type = typeof element;
-    typeCounts[type] !== undefined && typeCounts[type]++;
+    if (!(type in typeCounts)) typeCounts[type] = 0;
+    typeCounts[type]++;
   }
   return typeCounts;
 };
